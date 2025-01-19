@@ -29,3 +29,6 @@ AWS_SECRET_ACCESS_KEY=""
 8) **Lesson_8**:
     - Информация с офф сайта: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/availability_zone (слева меню переменных и тд)
     - `Data Source`- изъятие информации из разных ресурсов (aws_availability_zones, aws_caller_identity, aws_region, aws_vpcs
+9) **Lesson_9**:
+    - Тут просто написан вариант как автоматически искать id (ami) iso образов для уствановки системы не привязываясь к региону
+    - Получение и поиск ami происходит с использованием `Data Source`
