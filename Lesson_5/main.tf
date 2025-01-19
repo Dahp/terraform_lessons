@@ -16,7 +16,7 @@ resource "aws_instance" "life_cycle_example" {
     "Name" = "life_cycle_example"
   }
   lifecycle {
-    #prevent_destroy = true # это запрещает удалять данный ресурс, те если будут сделаны какие то изменения,
+    #prevent_destroy = true # это запрещает удалять (и destroy тоже) данный ресурс, те если будут сделаны какие то изменения,
     # которые приводят к удалению уже созданного ресурса, он выполнены НЕ будут. Поумолчанию стоит false
 
     ignore_changes = ["ami", "instance_type"]
