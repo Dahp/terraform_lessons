@@ -6,12 +6,12 @@ AWS_ACCESS_KEY_ID=""
 AWS_SECRET_ACCESS_KEY=""
 ```
 ---
-1) **Lesson_1**: aws_instance, default_tags
+1) **Lesson_1**: `aws_instance`, `default_tags`
 2) **Lesson_2**: 
-    - Создаем инстансе aws_instance
-    - Создаем SG aws_security_group, с несколькими rule ingress/engress
-    - Подключаем (attache) созданные SG к aws_security_group при помощи vpc_security_group_id = []
-    - Используем user_data = file("file.sh") для выполнения скрипта при инициализации
+    - Создаем инстансе `aws_instance`
+    - Создаем SG `aws_security_group`, с несколькими rule ingress/engress
+    - Подключаем (attache) созданные SG к `aws_security_group` при помощи `vpc_security_group_id = []`
+    - Используем `user_data = file("file.sh")` для выполнения скрипта при инициализации
 3) **Lesson_3**:
-    - Использование в `user_data` templatefile("file.sh") - это улучшение file("file.sh"), так как мы можем посылать
+    - Использование в `user_data =  templatefile("file.sh")` - это улучшение для file("file.sh"), так как мы можем посылать
     теперь переменные в file.sh, которые будут использоваться в скрипте.
