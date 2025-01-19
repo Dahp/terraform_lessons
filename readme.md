@@ -26,3 +26,6 @@ AWS_SECRET_ACCESS_KEY=""
     - Делать `output` крайне важно, так как это позволяет использовать данные о ресурсах в других терраформ файлах, ну те это как глабальные переменные. 
 7) **Lesson_7**:
     - Порядок создания ресурсов. `Dependencies` - зависимость одного ресурса от другого, или нескольких. `depends_on = [...]` перечисление ресурсов от которых зависит
+8) **Lesson_8**:
+    - Информация с офф сайта: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/availability_zone (слева меню переменных и тд)
+    - `Data Source`- изъятие информации из разных ресурсов (aws_availability_zones, aws_caller_identity, aws_region, aws_vpcs
