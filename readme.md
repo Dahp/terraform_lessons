@@ -1,4 +1,4 @@
-Импорт переменных среды `export $(cat .env | xargs)`
+Импорт переменных среды `export $(cat .env | xargs)`.
 Внутри файла `.env`
 ```ruby
 AWS_DEFAULT_REGION=us-east-1
@@ -13,4 +13,5 @@ AWS_SECRET_ACCESS_KEY=""
     - Подключаем (attache) созданные SG к aws_security_group при помощи vpc_security_group_id = []
     - Используем user_data = file("file.sh") для выполнения скрипта при инициализации
 3) **Lesson_3**:
-    - 
+    - Использование в `user_data` templatefile("file.sh") - это улучшение file("file.sh"), так как мы можем посылать
+    теперь переменные в file.sh, которые будут использоваться в скрипте.
