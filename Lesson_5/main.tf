@@ -11,12 +11,12 @@ provider "aws" {
 resource "aws_instance" "life_cycle_example" {
   ami                    = "ami-043a5a82b6cf98947"
   instance_type          = "t2.nano"
-  vpc_security_group_ids = [aws_security_group.sg_webserver] # подключаем созданную SG
+  vpc_security_group_ids = [aws_security_group.sg_webserver.id] # подключаем созданную SG
   tags = {
     "Name" = "life_cycle_example"
   }
   lifecycle {
-    prevent_destroy = true # это запрещает удалять данный ресурс, те если будут сделаны какие то изменения,
+    #prevent_destroy = true # это запрещает удалять данный ресурс, те если будут сделаны какие то изменения,
     # которые приводят к удалению уже созданного ресурса, он выполнены НЕ будут. Поумолчанию стоит false
 
     ignore_changes = ["ami", "instance_type"]
@@ -27,7 +27,7 @@ resource "aws_instance" "life_cycle_example" {
 resource "aws_instance" "ZeroDownTime_example" {
   ami                    = "ami-043a5a82b6cf98947"
   instance_type          = "t2.nano"
-  vpc_security_group_ids = [aws_security_group.sg_webserver] # подключаем созданную SG
+  vpc_security_group_ids = [aws_security_group.sg_webserver.id] # подключаем созданную SG
   tags = {
     "Name" = "ZeroDownTime_example"
   }
