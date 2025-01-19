@@ -13,5 +13,5 @@ AWS_SECRET_ACCESS_KEY=""
     - Подключаем (attache) созданные SG к `aws_security_group` при помощи `vpc_security_group_id = []`
     - Используем `user_data = file("file.sh")` для выполнения скрипта при инициализации
 3) **Lesson_3**:
-    - Использование в `user_data =  templatefile("file.sh")` - это улучшение для file("file.sh"), так как мы можем посылать
+    - Использование в `user_data =  templatefile("file.sh.tpl")` - это улучшение для `user_data = file("file.sh")`, так как мы можем посылать
     теперь переменные в file.sh, которые будут использоваться в скрипте.
